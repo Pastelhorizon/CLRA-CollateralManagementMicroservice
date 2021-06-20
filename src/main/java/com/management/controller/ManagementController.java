@@ -30,7 +30,7 @@ public class ManagementController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(ManagementController.class);
 
-	@RequestMapping(path = "/collateral/health", method = RequestMethod.GET)
+	@RequestMapping(path = "/", method = RequestMethod.GET)
 	public ResponseEntity<?> healthCheckup() {
 		LOGGER.info("AWS Health Check");
 		return new ResponseEntity<>("", HttpStatus.OK);
