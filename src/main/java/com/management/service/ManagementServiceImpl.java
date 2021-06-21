@@ -5,6 +5,8 @@ import java.util.Optional;
 
 import javax.transaction.Transactional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,12 +31,13 @@ public class ManagementServiceImpl implements ManagementService {
 	@Autowired
 	CollateralRealestateRepository collateralRealestateRepository;
 
-//	private static final Logger LOGGER = LoggerFactory.getLogger(ManagementServiceImpl.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(ManagementServiceImpl.class);
 
+	//Get the collateral details according to the loan id
 	@Transactional
 	public DataCollateralLoan getCollateralLoan(int loanid) throws NoCollateralLoanFoundException {
 
-//		LOGGER.info("Starting Get Collateral Loan Details Service");
+		LOGGER.info("Starting Get Collateral Loan Details Service");
 
 		Optional<CollateralLoan> findById = collateralLoanRepository.findById(loanid);
 		if (!findById.isPresent()) {
@@ -81,7 +84,8 @@ public class ManagementServiceImpl implements ManagementService {
 		}
 
 	}
-
+	
+	//Save the collateral details accoring to the loan id
 	@Transactional
 	public String saveCollateralLoan(CollateralLoan collateralLoan) {
 //		LOGGER.info("Starting Save Collateral Loan Details Service");

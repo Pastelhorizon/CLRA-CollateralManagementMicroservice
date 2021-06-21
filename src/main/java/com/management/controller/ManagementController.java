@@ -30,12 +30,14 @@ public class ManagementController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(ManagementController.class);
 
+	//REST Endpoint for health check by AWS
 	@GetMapping(path = "/")
 	public ResponseEntity<?> healthCheckup() {
 		LOGGER.info("AWS Health Check");
 		return new ResponseEntity<>("", HttpStatus.OK);
 	}
 
+	//REST Endpoint to get the collateral details using the loan id
 	@GetMapping(path = "/collateral/getCollaterals/{loanid}")
 	public ResponseEntity<?> getCollateralByLoanId(@RequestHeader(name = "Authorization") String token,
 			@PathVariable int loanid) {
@@ -62,6 +64,7 @@ public class ManagementController {
 		}
 	}
 
+	//Saving the collateral details of a loan using the loan id
 	@PostMapping(path = "/collateral/saveCollateral")
 	public ResponseEntity<?> saveCollateral(@RequestHeader(name = "Authorization") String token,
 			@RequestBody CollateralLoan collateralLoan) {

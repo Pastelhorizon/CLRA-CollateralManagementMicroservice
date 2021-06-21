@@ -13,7 +13,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-
+//Entity for Collateral Cash Deposit Type
 @Getter
 @Setter
 @ToString

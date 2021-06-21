@@ -18,6 +18,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 @Table(name = "collateral_loan")
+//Entity for Loan with One to One mapping with Real Estate Data and Cash Deposit Data
 public class CollateralLoan {
 
 	@Id
