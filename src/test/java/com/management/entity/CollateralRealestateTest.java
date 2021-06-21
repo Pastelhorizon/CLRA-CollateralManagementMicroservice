@@ -7,51 +7,52 @@ import org.junit.jupiter.api.Test;
 class CollateralRealestateTest {
 
 	CollateralRealestate data = new CollateralRealestate();
-	
+
 	@Test
 	void testSetId() {
 		data.setId(1);
-		assertEquals(data.getId(),1);
+		assertEquals(1, data.getId());
 	}
 
 	@Test
 	void testSetCollateralType() {
 		data.setCollateralType("a");
-		assertEquals(data.getCollateralType(),"a");
-	
+		assertEquals("a", data.getCollateralType());
+
 	}
+
 	@Test
 	void testSetAddress() {
 		data.setAddress("a");
-		assertEquals(data.getAddress(),"a");
-	
+		assertEquals("a", data.getAddress());
+
 	}
 
 	@Test
 	void testSetCurrentvalue() {
 		data.setCurrentvalue(1);
-		assertEquals(data.getCurrentvalue(),1);
-	
+		assertEquals(1, data.getCurrentvalue());
+
 	}
 
 	@Test
 	void testSetRatepersqft() {
 		data.setRatepersqft(1);
-		assertEquals(data.getRatepersqft(),1);
+		assertEquals(1, data.getRatepersqft());
 
 	}
 
 	@Test
 	void testSetDepreciationrate() {
 		data.setDepreciationrate(1);
-		assertEquals(data.getDepreciationrate(),1);
+		assertEquals(1, data.getDepreciationrate());
 
 	}
 
 	@Test
 	void testToString() {
 		String string = data.toString();
-		assertEquals(string,data.toString());
+		assertEquals(string, data.toString());
 	}
 
 }

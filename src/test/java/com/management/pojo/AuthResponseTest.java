@@ -12,18 +12,18 @@ class AuthResponseTest {
 	@Test
 	void testSetUid() {
 		auth.setName("a");
-		assertEquals(auth.getName(),"a");
+		assertEquals("a",auth.getName());
 	}
 
 	@Test
 	void testSetName() {
 		auth.setUid("a");
-		assertEquals(auth.getUid(),"a");
+		assertEquals("a",auth.getUid());
 	}
 
 	@Test
 	void testSetValid() {
 		auth.setValid(true);
-		assertEquals(auth.isValid(),true);
+		assertEquals(true,auth.isValid());
 	}
 }

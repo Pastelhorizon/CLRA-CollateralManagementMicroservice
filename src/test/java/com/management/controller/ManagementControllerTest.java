@@ -102,7 +102,7 @@ public class ManagementControllerTest {
 	@Test
 	public void testhealth() {
 		ResponseEntity<?> healthCheckup = managementController.healthCheckup();
-		assertEquals(healthCheckup.getStatusCodeValue(), 200);
+		assertEquals(200,healthCheckup.getStatusCodeValue());
 
 	}
 

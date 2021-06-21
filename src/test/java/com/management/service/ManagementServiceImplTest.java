@@ -24,13 +24,13 @@ public class ManagementServiceImplTest {
 	@Test
 	void testGetCollateralLoanRealEstate() throws NoCollateralLoanFoundException {
 		DataCollateralLoan collateralLoan = service.getCollateralLoan(1);
-		assertEquals(collateralLoan.getLoanId(),1);
+		assertEquals(1,collateralLoan.getLoanId());
 	}
 	
 	@Test
 	void testGetCollateralLoancashDeposit() throws NoCollateralLoanFoundException {
 		DataCollateralLoan collateralLoan = service.getCollateralLoan(4);
-		assertEquals(collateralLoan.getLoanId(),4);
+		assertEquals(4,collateralLoan.getLoanId());
 	}
 
 	@Test
@@ -51,7 +51,7 @@ public class ManagementServiceImplTest {
 		collateralCashdeposit.setId(1);
 		collateralLoan.setCollateralCashdeposit(collateralCashdeposit);
 		String saveCollateralLoan = service.saveCollateralLoan(collateralLoan);
-		assertEquals(saveCollateralLoan, "Collateral Loan Inserted");
+		assertEquals("Collateral Loan Inserted",saveCollateralLoan);
 		
 	}
 	
@@ -66,7 +66,7 @@ public class ManagementServiceImplTest {
 		collateralRealestate.setId(3);
 		collateralLoan.setCollateralRealestate(collateralRealestate);
 		String saveCollateralLoan = service.saveCollateralLoan(collateralLoan);
-		assertEquals(saveCollateralLoan, "Collateral Loan Inserted");
+		assertEquals("Collateral Loan Inserted",saveCollateralLoan);
 		
 	}	
 
